@@ -1,14 +1,8 @@
 import fetchData from "./fetchData";
-
+import type { Pokemons } from "./types/types";
 import "./App.css";
 import { useEffect, useState } from "react";
-
-type Pokemons =
-  | {
-      name: string;
-      imgUrl: string;
-    }[]
-  | null;
+import PokemonSection from "./components/PokemonSection.tsx";
 
 function App() {
   const NUMBERCARDS = 12;
@@ -26,7 +20,15 @@ function App() {
 
     loadPokemons();
   }, []);
-  return <>{loading && <p>fetching pokemons...</p>}</>;
+  return (
+    <>
+      {loading ? (
+        <p>fetching pokemons...</p>
+      ) : (
+        <PokemonSection pokemons={pokemons} />
+      )}
+    </>
+  );
 }
 
 export default App;
