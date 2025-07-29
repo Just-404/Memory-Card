@@ -11,9 +11,7 @@ function App() {
   const [pokemons, setPokemons] = useState<Pokemons>([]);
   const [currentScore, setCurrentScore] = useState<number>(0);
   const [bestScore, setBestScore] = useState<number>(0);
-  const [clickedPokemons, setClickedPokemons] = useState<Set<string>>(
-    new Set()
-  );
+  const [, setClickedPokemons] = useState<Set<string>>(new Set());
 
   useEffect(() => {
     async function loadPokemons() {
