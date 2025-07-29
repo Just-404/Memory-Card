@@ -5,6 +5,15 @@
   text-align: center;
 }
 
+.scoreboard {
+  padding: 0 1rem;
+  display: flex;
+  gap: 1rem;
+  background-color: rgb(1, 1, 1);
+  color: white;
+  margin-bottom: 1rem;
+}
+
 .pokemons-container {
   width: 100%;
   display: grid;
@@ -21,6 +30,7 @@
   background-color: rgb(232, 81, 81);
   color: azure;
   transition: all ease-in 0.4s;
+  transition: transform 3s ease;
 }
 
 .pokemon-card:hover {
